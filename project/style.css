@@ -1,0 +1,258 @@
+
+/* colors */
+:root{
+    --clr-pink: #AB3B61;
+    --clr-dark-blue:#133C6B;
+    --clr-grey: #BBB2B5;
+    --clr-peach: #EDC8B8;
+    --clr-beige: #EDE2DD;
+}
+
+/*reset styles*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+body{
+    font-family: "Barlow", sans-serif;
+    background-color: var(--clr-beige);
+    color: var(--clr-dark-blue);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 48px;
+    align-items: center;
+}
+.header .logo-container{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.header .logo-container .logo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.header .navigation{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.header .navigation .nav-li{
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+.header .navigation .nav-btn{
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    color: var(--clr-dark-blue);
+}
+
+.card{
+    margin: 24px;
+    font-size: 22px;
+    color: var(--clr-dark-blue);
+}
+
+.main .home .home-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 32px;
+}
+
+.home .home-card .home-img-container{
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.home-card .home-img-container .home-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.home-card .home-text-container{
+    width: 50%;
+    padding-left: 48px;
+}
+.home-text-container .home-text{
+    text-align: justify;
+    font-size: 28px;
+}
+
+.home-text-container .home-text .address-h2{
+    font-size: 32px;
+  
+}
+
+/* login */
+
+.login{
+    position:relative;
+    height: 40vh;
+    margin: 48px;
+}
+
+.login .login-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.login .login-title{
+    font-size: 22px;
+    color: var(--clr-dark-blue);
+    padding: 4px 0px 14px 0px;
+
+}
+
+.login .login-form{
+    font-size: 18px;
+    border-radius: 4px;
+    padding-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    gap: 14px;
+}
+
+.profile-button{
+    font-size: 18px;
+    background-color: var(--clr-pink);
+    color: var(--clr-beige);
+    width: 96px;
+    padding: 6px;
+    border: 1px solid var(--clr-dark-blue);
+    border-radius: 4px;
+}
+
+.input{
+    font-size: 18px;
+    width: 200px;
+    padding: 6px;
+    border: 1px solid var(--clr-dark-blue);
+    border-radius: 4px;
+}
+
+.form-message{
+    font-size: 18px;
+    
+}
+
+/* register */
+.register{
+    position:relative;
+    height: 40vh;
+    margin: 48px;
+}
+
+.register .register-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.register-section .register-title{
+    font-size: 22px;
+    color: var(--clr-dark-blue);
+    padding: 4px 0px 14px 0px;
+
+}
+
+.register-section .register-form{
+    font-size: 18px;
+    border-radius: 4px;
+    padding-bottom: 14px;
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    gap: 12px;
+}
+
+
+
+
+/* CATALOG SECTION */
+.catalog{
+    position: relative;
+}
+
+.catalog-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 200px;
+}
+
+.catalog-card .catalog-title{
+    padding-bottom: 24px;
+    font-size: 48px;
+}
+
+/* MY BOOKS section */
+
+.my-books{
+    position: relative;
+    margin-top: 400px ;
+    margin-bottom: 400px;
+}
+
+.my-books-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 200px;
+}
+
+.my-books-card .my-books-title{
+    padding-bottom: 24px;
+    font-size: 48px;
+}

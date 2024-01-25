@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <title>Books reviews</title>
+</head>
+<body>
+   <header class="header">
+    <div class="logo-container">
+            <img src="images/logo.jpg" alt="Logo" class="logo">
+    </div>
+
+    <nav class="nav">
+        <ul class="navigation" role="list">
+            <li class="nav-li"><a class="nav-btn" href="/">Home</a></li>
+            <li class="nav-li"><a class="nav-btn" href="/catalog">Catalog</a></li>
+            <li class="nav-li"><a class="nav-btn" href="/mybooks">My Books</a></li>
+            <li class="nav-li"><a class="nav-btn" href="/create">Add Book</a></li>
+            <li class="nav-li"><a class="nav-btn" href="login">Login</a></li>
+            <li class="nav-li"><a class="nav-btn" href="/register">Register</a></li>
+            <li class="nav-li"><a class="nav-btn" href="">Logout</a></li>
+        </ul>
+    </nav>
+   </header>
+
+   <main class="main">
+
+    <!-- Home Page -->
+    <section class="home">
+        <div class="home-card card">           
+            <div class="home-text-container">
+                <p class="home-text"> <span class="address-h2">Dear friend,</span> <br>Welcome to the world of books. Here you will find the best literature works filled with adventure, magic, love, and mystery. See which are the most popular books. You can make your own book list - so that you can keep track of your book challenges and help other people immerse themselves in your favorite book worlds.
+                </p>
+            </div>
+            <div class="home-img-container">
+                <img src="images/homePage-readingBooks.png" alt="Reading Books" class="home-img">
+            </div>
+        </div>
+    </section>
+
+        <!-- Login-section -->
+    <div class="login">
+        <section class="login-section card-section">
+            <h2 class="login-title">Login</h2>
+            <form class="login-form">
+                <input class="input" type="text" name="email" id="email" placeholder="email">
+                <input class="input" type="password" name="password" id="password" placeholder="password">
+                <button type="submit" class="login-button profile-button">Login</button>
+            </form>
+            <p class="form-message">Don't have profile? <a href="">Register</a></p>
+        </section>
+    </div>
+
+     <!-- Register section -->
+         <div class="register">
+             <section class="register-section card-section">
+                <h2 class="register-title">Register</h2>
+                <form class="register-form">
+                    <input class="input" type="text" name="email" id="register-email" placeholder="email">
+                    <input class="input" type="password" name="password" id="register-password" placeholder="password">
+                    <input class="input" type="password" name="re-password" id="re-password" placeholder="repeat the password">
+                    <button type="submit" class="login-button profile-button">Register</button>
+                 </form>
+                 <p class="form-message">Already have a profile? <a href="">Login</a></p>
+              </section>
+        </div>
+
+    <!-- Create -->
+
+
+      <!-- Catalog -->
+
+      <section class="catalog">
+
+        <div class="catalog-card card">
+            <h1 class="catalog-title">All Books</h1>
+
+            <ul class="catalog-ul" role="list">
+                <li class="catalog-li">
+                    <h3 class="li-title">Book Title</h3>
+                    <p class="li-type">Type: Book Type</p>
+                    <p class="li-cover"><img src="" alt="Book cover"></p>
+                    <button class="li-btn">Details</button>
+                </li>
+
+                <!-- if there are no books -->
+                <!-- <p class="no-books">Add the first book!</p> -->
+
+            </ul>
+        </div>
+
+      </section>
+
+
+        <!-- My books -->
+
+      <section class="my-books">
+        <div class="my-books-card card">
+            <h1 class="my-books-title">My Books</h1>
+
+            <ul class="my-books-ul" role="list">
+                <li class="my-books-li">
+                    <h3 class="li-title">Book Title</h3>
+                    <p class="li-type">Type: Book Type</p>
+                    <p class="li-cover"><img src="" alt="Book cover"></p>
+                    <button class="li-btn">Details</button>
+                </li>
+
+                <!-- if there are no books -->
+                <!-- <p class="no-books">Add the first book!</p> -->
+
+            </ul>
+        </div>
+      </section>
+
+
+      
+   </main>
+</body>
+</html>
