@@ -1,6 +1,10 @@
 import {html, render} from '../node_modules/lit-html/lit-html.js';
 import page from '../node_modules/page/page.mjs';
-import { getUserData } from './utils.js';
+import { logout } from './api/auth.js';
+import { clearUserData, getUserData } from './utils.js';
+import { showHome } from './views/homePage.js';
+import { showLogin } from './views/login.js';
+import { showRegister } from './views/register.js';
 
 let navTemplate = ()=> html`
  <div class="logo-container">
@@ -11,11 +15,14 @@ let navTemplate = ()=> html`
         <ul class="navigation" role="list">
             <li class="nav-li"><a class="nav-btn" href="/">Home</a></li>
             <li class="nav-li"><a class="nav-btn" href="/catalog">Catalog</a></li>
+            ${user
+            ? html`
             <li class="nav-li"><a class="nav-btn" href="/mybooks">My Books</a></li>
-            <li class="nav-li"><a class="nav-btn" href="/create">Add Book</a></li>
-            <li class="nav-li"><a class="nav-btn" href="login">Login</a></li>
-            <li class="nav-li"><a class="nav-btn" href="/register">Register</a></li>
-            <li class="nav-li"><a class="nav-btn" href="">Logout</a></li>
+            <li class="nav-li"><a class="nav-btn" href="/create">Add Book</a></li>           
+            <li class="nav-li"><a class="nav-btn" href="" @click=${onLogout}>Logout</a></li>`
+            : html` <li class="nav-li"><a class="nav-btn" href="/login">Login</a></li>
+            <li class="nav-li"><a class="nav-btn" href="/register">Register</a></li>`}
+            
         </ul>
     </nav>`
 
@@ -39,9 +46,18 @@ function updateNav(ctx, next){
     next();
 }
 
+function onLogout(){
+    logout();
+    clearUserData();
+}
+
 
 page(decorateCtx);
 page(sesstion);
 page(updateNav);
+
+page('/login', showLogin);
+page('/', showHome);
+page('/register', showRegister)
 
 page.start();
