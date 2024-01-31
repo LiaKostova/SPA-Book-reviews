@@ -3,32 +3,33 @@ import { createBook } from "../api/data.js";
 import { bookPreview } from "./bookPreview.js";
 
 let createTemplate = (onCreate) => html`
-  <form id="create-form" @submit=${onCreate} action="" method="">
-    <fieldset>
-      <legend>Add new Book</legend>
-      <p class="field">
+
+<div class="createForm-container">
+   <form id="create-form" @submit=${onCreate} action="" method="">
+     <h2>Add new Book</h2>
+      <div class="field">
         <label for="title">Title</label>
         <span class="input">
           <input type="text" name="title" id="title" placeholder="Title" />
         </span>
-      </p>
-      <p class="field">
+      </div>
+      <div class="field">
         <label for="description">Description</label>
         <span class="input">
-          <textarea
+          <input
             name="description"
             id="description"
             placeholder="Description"
-          ></textarea>
+         />
         </span>
-      </p>
-      <p class="field">
+      </div>
+      <div class="field">
         <label for="image">Image</label>
         <span class="input">
           <input type="text" name="imageUrl" id="image" placeholder="Image" />
         </span>
-      </p>
-      <p class="field">
+      </div>
+      <div class="field">
         <label for="type">Type</label>
         <span class="input">
           <select id="type" name="type">
@@ -39,10 +40,11 @@ let createTemplate = (onCreate) => html`
             <option value="Other">Other</option>
           </select>
         </span>
-      </p>
+      </div>
       <input class="button submit" type="submit" value="Add Book" />
-    </fieldset>
   </form>
+</div>
+ 
 `;
 
 

@@ -219,16 +219,31 @@ body{
 
 
 /* CATALOG SECTION */
-.catalog{
-    position: relative;
+
+.catalog-container{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+ .catalog-ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    padding-bottom: 12px;  
 }
 
-.catalog-card{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 200px;
+.catalog-li{
+    border: 2px solid var(--clr-pink);
+   border-radius: 8px;
+   padding: 12px;
+   text-align: center;
+}
+
+.catalog-li .li-btn{
+    font-weight: bolder;
+    color: var(--clr-pink);
 }
 
 .catalog-card .catalog-title{
@@ -240,19 +255,68 @@ body{
 
 .my-books{
     position: relative;
-    margin-top: 400px ;
-    margin-bottom: 400px;
 }
 
 .my-books-card{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
 }
 
 .my-books-card .my-books-title{
     padding-bottom: 24px;
     font-size: 48px;
+}
+
+.my-books-card .mybooks-ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+
+/* Add new book */
+.createForm-container{
+    text-align: center;
+
+}
+
+.create-form{
+    
+    margin: 48px;
+    padding: 24px;
+    text-align: left;
+    font-size: 32px;
+    gap: 12px;
+}
+.field{
+    margin: 10px;
+    padding: 10px;
+}
+
+.submit{
+    background-color: var(--clr-pink);
+    color: var(--clr-peach);
+    font-size: 24px;
+    border-radius: 8px;
+    margin-top: 6px;
+
+}
+
+/* details */
+
+.details{
+    display: flex;
+   flex-direction: column;
+    padding: 32px;
+    gap:12px;
+}
+
+/* edit */
+
+.edit-form{
+    gap: 8px;
+    padding: 6px;
 }
