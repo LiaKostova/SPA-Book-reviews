@@ -3,6 +3,7 @@ import page from '../node_modules/page/page.mjs';
 import { logout } from './api/auth.js';
 import { clearUserData, getUserData } from './utils.js';
 import { showCatalog } from './views/catalog.js';
+import { showCreate } from './views/create.js';
 import { showHome } from './views/homePage.js';
 import { showLogin } from './views/login.js';
 import { showRegister } from './views/register.js';
@@ -61,6 +62,7 @@ page(updateNav);
 page('/login', showLogin);
 page('/', showHome);
 page('/register', showRegister);
-page('/catalog', showCatalog)
+page('/catalog', showCatalog);
+page('/create', showCreate);
 
 page.start();

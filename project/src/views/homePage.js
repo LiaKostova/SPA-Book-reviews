@@ -7,7 +7,7 @@ let homeTemplate = () => html` <section class="home">
         </p>
     </div>
     <div class="home-img-container">
-        <img src="images/homePage-readingBooks.png" alt="Reading Books" class="home-img">
+        <img src="/project/images/homepage.png" alt="Reading Books" class="home-img">
     </div>
 </div>
 </section>`;
