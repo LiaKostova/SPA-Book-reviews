@@ -1,7 +1,6 @@
 export function getUserData(){
     let users = JSON.parse(sessionStorage.getItem("user"));
-    console.log(users)
-    
+  
     if(users){
         return users;
     }else{

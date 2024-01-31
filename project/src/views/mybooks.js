@@ -1,6 +1,7 @@
 import { getUserData } from "../utils.js";
 import {html} from '../../node_modules/lit-html/lit-html.js';
 import { getMyBooks } from "../api/data.js";
+import {bookPreview} from './bookPreview.js';
 
 let mybooksTemplate = (books) => html`
   <section class="my-books">
@@ -23,7 +24,9 @@ let mybooksTemplate = (books) => html`
 
 export async function showMyBooks(ctx){
     let userData = getUserData();
-    let books = await getMyBooks(userData.id);
+  
+    let books = await getMyBooks(userData._id);
+    console.log(books)
 
     ctx.render(mybooksTemplate(books));
 }

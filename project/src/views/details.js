@@ -2,6 +2,7 @@ import { getUserData } from "../utils.js";
 import {html, nothing} from '../../node_modules/lit-html/lit-html.js';
 import { deleteBook, getTheBook } from "../api/data.js";
 
+
 let detailsTemplate = (book, isCreator, onDelete) => html `
      <section class="details">
         <div class="detail-basic-info">
@@ -17,7 +18,7 @@ let detailsTemplate = (book, isCreator, onDelete) => html `
             ${isCreator
             ? html`
              <div class="descriptions-btns">
-                <a href="" class="li-btn details-btn">Edit</a>
+                <a href="/edit/${book._id}" class="li-btn details-btn">Edit</a>
                 <a href="" class="li-btn details-btn" @click=${onDelete}>Delete</a>
             </div> `
             :nothing}
@@ -29,8 +30,8 @@ let detailsTemplate = (book, isCreator, onDelete) => html `
 
 export async function showDetails(ctx){
     let bookId = ctx.params.id;
-    let theBook = await getTheBook(bookId);
-    let ownerId =  theBook._ownerId;
+    let book = await getTheBook(bookId);
+    let ownerId =  book._ownerId;
 
     let userId = getUserData()?._id;
 

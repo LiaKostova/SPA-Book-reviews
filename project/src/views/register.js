@@ -33,7 +33,8 @@ export async function showRegister(ctx){
         }
 
         if(password !== repass){
-            alert("Your password and re-password don't match!")
+            alert("Your password and re-password don't match!");
+            return;
         }
 
         try{
